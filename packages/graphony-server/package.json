@@ -1,0 +1,37 @@
+{
+  "name": "graphony-server",
+  "version": "0.0.10",
+  "main": "dist/graphony-server.js",
+  "module": "dist/graphony-server.mjs",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "graphony-core": "^0.0.9",
+    "graphony-debug": "^0.0.9",
+    "graphony-polka": "^0.0.9",
+    "graphony-ws": "^0.0.9",
+    "jsonwebtoken": "^8.5.1",
+    "jwt-decode": "^3.1.2"
+  },
+  "scripts": {
+    "build": "pnpx rollup -c",
+    "build:watch": "pnpx rollup -cw",
+    "dev": "run-p build:watch test:watch",
+    "server": "npx nodemon test/server.js",
+    "test": "jest",
+    "test:watch": "jest --watch"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "20.0.0",
+    "@rollup/plugin-node-resolve": "^13.0.4",
+    "esbuild": "0.12.20",
+    "esbuild-jest": "^0.5.0",
+    "esbuild-register": "^2.6.0",
+    "esm": "^3.2.25",
+    "jest": "^27.0.6",
+    "nodemon": "^2.0.12",
+    "npm-run-all": "^4.1.5",
+    "rollup": "^2.56.2"
+  },
+  "gitHead": "7dc26ef357929f749aba45eda1ace8f784389d70"
+}

@@ -1,0 +1,1 @@
+export const isNumber = (can) => typeof can === 'number' && Number.isFinite(can);

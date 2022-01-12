@@ -1,0 +1,24 @@
+{
+  "name": "graphony-debug",
+  "version": "0.0.9",
+  "main": "dist/graphony-debug.js",
+  "module": "dist/graphony-debug.mjs",
+  "scripts": {
+    "build": "pnpx rollup -c",
+    "build:watch": "pnpx rollup -cw",
+    "test": "jest",
+    "test:watch": "jest --watch"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "20.0.0",
+    "@rollup/plugin-node-resolve": "^13.0.4",
+    "esbuild": "0.12.20",
+    "esbuild-jest": "^0.5.0",
+    "esbuild-register": "^2.6.0",
+    "esm": "^3.2.25",
+    "jest": "^27.0.6",
+    "nodemon": "^2.0.12",
+    "npm-run-all": "^4.1.5",
+    "rollup": "^2.56.2"
+  }
+}

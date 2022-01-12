@@ -1,0 +1,13 @@
+{
+  "author": "",
+  "name": "serverstats",
+  "version": "0.0.0",
+  "repository": "websockets/ws",
+  "dependencies": {
+    "express": "^4.16.4"
+  },
+  "devDependencies": {
+    "esbuild-register": "^2.6.0",
+    "rollup": "^2.56.2"
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "name": "graphony-client",
+  "version": "0.0.9",
+  "dependencies": {
+    "@savvagent-os/kestrel": "^1.0.5",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "crypto-hash": "^1.3.0",
+    "graphony-core": "^0.0.9",
+    "graphony-debug": "^0.0.9",
+    "jsonwebtoken": "^8.5.1",
+    "jwt-decode": "^3.1.2",
+    "node-fetch": "^2.6.1",
+    "whatwg-fetch": "^3.6.2"
+  },
+  "main": "dist/graphony-client.js",
+  "module": "src/GraphonyClient.js",
+  "scripts": {
+    "build": "pnpx rollup -c",
+    "build:watch": "pnpx rollup -cw",
+    "dev": "run-p build:watch test:watch",
+    "test": "jest",
+    "test:watch": "jest --watch"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "20.0.0",
+    "@rollup/plugin-node-resolve": "^13.0.4",
+    "esbuild": "0.12.20",
+    "esbuild-jest": "^0.5.0",
+    "esbuild-register": "^2.6.0",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.24.0",
+    "esm": "^3.2.25",
+    "jest": "^27.0.6",
+    "jest-localstorage-mock": "^2.4.14",
+    "npm-run-all": "^4.1.5",
+    "rollup": "^2.56.2"
+  },
+  "gitHead": "7dc26ef357929f749aba45eda1ace8f784389d70"
+}
