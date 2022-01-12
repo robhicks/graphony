@@ -100,6 +100,7 @@ describe('Graphony class', () => {
         .get()
         .set(obj)
         .once((val) => {
+          console.log(`val`, val)
           expect(val).to.be.eql(obj);
         })
     });
@@ -277,15 +278,15 @@ describe('Graphony class', () => {
     });
   })
 
-  describe.only('push', () => {
+  describe('push', () => {
     it('should be created when Graphony is instantiated', () => {
-      expect(g.push).to.exist();
+      expect(g.push).to.exist;
     });
 
     it('should add a simple object to an array', () => {
       const obj = { name: 'foo' };
       g.get().set([]).push(obj).once((val) => {
-        expect(val).to.equal([obj]);
+        expect(val).to.eql([obj]);
       });
     });
 
@@ -293,14 +294,14 @@ describe('Graphony class', () => {
       const obj = { name: 'foo', address: { city: 'bar', state: 'baz', region: { name: 'south america' } } };
       g.get().get('foo').get('bar').set([])
         .push(obj)
-        .once((val) => expect(val).to.equal([obj]));
+        .once((val) => expect(val).to.eql([obj]));
     });
 
-    it.only('should add items to an array', () => {
+    it('should add items to an array', () => {
       const foo = { name: 'foo' };
       const bar = { name: 'bar' };
       g.get().set([]).push(foo).push(bar)
-        .once((val) => expect(val).to.equal([foo, bar]));
+        .once((val) => expect(val).to.eql([foo, bar]));
     });
 
     it('should add an object to an array by reference', () => {
@@ -310,8 +311,8 @@ describe('Graphony class', () => {
       };
 
       g.get().get('rob').set(rob);
-      graphony.get().get('users').set([]).push(rob)
-        .once((val) => expect(val).to.equal([rob]));
+      g.get().get('users').set([]).push(rob)
+        .once((val) => expect(val).to.eql([rob]));
     });
   })
 });

@@ -58,7 +58,7 @@ export default class Node {
   }
 
   get value() {
-    return this._value
+    return this.valFromRefArray(this._value)
   }
 
   set value(val) {
@@ -69,7 +69,7 @@ export default class Node {
   }
 
   valFromRefArray(value) {
-    let rv = null;
+    let rv = value;
     if (isArray(value) && value.some((el) => refRegX.test(el))) {
       rv = value.map((el) => {
         const node = this.nodes.get(el);
